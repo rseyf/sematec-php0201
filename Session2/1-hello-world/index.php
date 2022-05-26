@@ -1,2 +1,13 @@
-<?php
-    echo "salam donya222";
+<html>
+    <head>
+        <title>Salam PHP</title>
+    </head>
+
+<body>
+</body>
+    <?php
+        echo "Salam Donya!!";
+
+    ?>
+
+</html>
