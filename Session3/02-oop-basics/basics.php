@@ -1,6 +1,6 @@
 <?php
 // use Model\PopSinger as pop; // alias 
-use Model\PopSinger;
+use App\Domain\PopSinger;
 require_once(__DIR__ . "/src/Model/PopSinger.php");
 require_once(__DIR__ . "/src/Model/ClassicalSinger.php");
 
@@ -16,6 +16,6 @@ $mohsenYeganeh->sing();
 echo PopSinger::$AUTHOR;
 
 
-$homayounShajarian = new Model\ClassicalSinger();
+$homayounShajarian = new App\Domain\ClassicalSinger();
 
 
