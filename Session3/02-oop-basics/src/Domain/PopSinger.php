@@ -1,5 +1,5 @@
 <?php
-namespace Model;
+namespace App\Domain;
 class PopSinger{
 
     // propertise
