@@ -1,4 +1,5 @@
 <?php
+namespace Model;
 class PopSinger{
 
     // propertise
@@ -19,7 +20,7 @@ class PopSinger{
         $this->isAlive = $isAlive;
         $this->albums = $albums;
         $this->popularSong = $popularSong;
-        // echo static::$AUTHOR;
+        // echo self::$AUTHOR;
         $this->recordAlbum();
     }
 
