@@ -1,5 +1,7 @@
 <?php
+namespace App\Classes\BaseClasses;
 
+// Parent Class
 class Singer {
     // prropertise
     private string $name;
@@ -10,14 +12,15 @@ class Singer {
         $this->name = $name;
     }
 
-    // Encapsulation
-    // setter
-    public function setName($name) {
-        $this->name = $name;
-    }
-
     // getter
     public function getName() {
         return $this->name;
     }
+
+    // Encapsulation
+    // setter
+    protected function setName($name) {
+        $this->name = $name;
+    }
+
 }

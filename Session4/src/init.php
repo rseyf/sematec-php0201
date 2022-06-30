@@ -1,8 +1,6 @@
 <?php
+require_once __DIR__ ."/autoloader.php";
+use App\Classes\PopSinger;
 
-require_once("Classes/Singer.php");
-require_once("Classes/PopSinger.php");
-
-
-$mohsenYeganeh = new PopSinger("Mohsen Yeganeh");
+$mohsenYeganeh = new PopSinger("Mohsen Yeganeh",37);
 $mohsenYeganeh->whoAmI();
