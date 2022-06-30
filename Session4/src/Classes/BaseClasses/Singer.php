@@ -13,8 +13,4 @@ abstract class Singer {
     // setter
     abstract protected function setName($name);
 
-    public function spellMyName() {
-        var_dump(explode(" ",$this->getName()));
-    }
-
 }

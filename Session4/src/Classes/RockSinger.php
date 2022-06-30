@@ -1,11 +1,18 @@
 <?php
 namespace App\Classes;
 
+use App\Classes\Helper\NameHelper;
 use App\Classes\Interfaces\SingerInterface;
 
 // Interface Class
 class RockSinger implements SingerInterface {
     private string $name;
+
+    public function __construct($name)
+    {
+        $this->setName($name);
+    }
+
     public function getName() {
         return $this->name;
     }
@@ -18,9 +25,8 @@ class RockSinger implements SingerInterface {
         echo "ya ya ya ....";
     }
 
-
-    public function __construct($name)
-    {
-        $this->setName($name);
+    public function spell() {
+        NameHelper::spellMyName($this->getName());
     }
+
 }

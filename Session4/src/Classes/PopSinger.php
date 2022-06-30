@@ -2,12 +2,15 @@
 namespace App\Classes;
 
 use App\Classes\BaseClasses\Singer;
+use App\Classes\Traits\NameSpell;
 
 // Abstract class + Child Class
 class PopSinger extends Singer {
+    use NameSpell;
 
     private string $name;
     private int $age;
+
     public function __construct($name,$age)
     {
         $this->setName($name);   
@@ -32,7 +35,6 @@ class PopSinger extends Singer {
     }
 
     // override bakhshi az polymorphism hast
-    public function spellMyName() {
-        echo "spell namanadi!?";
-    }
+    // polymorphism yani taghire karbari va khoroojie yek method
+    
 }
