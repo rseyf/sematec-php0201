@@ -3,26 +3,36 @@ namespace App\Classes;
 
 use App\Classes\BaseClasses\Singer;
 
-// Child Class
+// Abstract class + Child Class
 class PopSinger extends Singer {
 
-    private $age = 0;
+    private string $name;
+    private int $age;
     public function __construct($name,$age)
     {
-        // be ers bordane khosoosiate constructor pedar (parent) hast:
-        parent::__construct($name);
-        
-        $this->age = $age;
+        $this->setName($name);   
+        $this->setAge($age);
+    }
+
+    public function getName():string {
+        return $this->name;
+    }
+
+    public function setAge($ageParam) {
+        $this->age = $ageParam;
     }
 
     public function getAge() {
         return $this->age;
     }
 
-    public function whoAmI() {
-        echo "I know who am I!! my name is: " . $this->getName() . "<br>";
-        echo "I am" . $this->getAge() . "years old";
+    protected function setName($nameParam)
+    {
+        $this->name = $nameParam;
     }
 
-    // inja ---> public function setName??? 
+    // override bakhshi az polymorphism hast
+    public function spellMyName() {
+        echo "spell namanadi!?";
+    }
 }

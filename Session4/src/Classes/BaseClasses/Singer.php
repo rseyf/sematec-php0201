@@ -2,25 +2,19 @@
 namespace App\Classes\BaseClasses;
 
 // Parent Class
-class Singer {
-    // prropertise
-    private string $name;
-
-    // constructore
-    public function __construct($name)
-    {
-        $this->name = $name;
-    }
+abstract class Singer {
+    // constructor
+    abstract public function __construct($name,$age);
 
     // getter
-    public function getName() {
-        return $this->name;
-    }
+    abstract public function getName(): string;
 
     // Encapsulation
     // setter
-    protected function setName($name) {
-        $this->name = $name;
+    abstract protected function setName($name);
+
+    public function spellMyName() {
+        var_dump(explode(" ",$this->getName()));
     }
 
 }
