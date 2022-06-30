@@ -24,6 +24,11 @@ class PopSinger{
         $this->recordAlbum();
     }
 
+    // public function __call($name, $arguments)
+    // {
+    //     echo "oopes! method $name does not exists!";
+    // }
+
     //// ---------
     // accessing to private propertise through public methods
     // we name it encapsulation
